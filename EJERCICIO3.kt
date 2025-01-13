@@ -20,8 +20,8 @@ class Persona(val peso: Double, val altura: Double){
     private fun obtenerDescImc(imc:Double): String{
         return when{
             imc < 18.5 -> "peso insuficiente"
-            imc >= 18.5 && imc <= 24.9 -> "peso saludable"
-            imc >= 25.0 && imc <= 29.9 -> "sobrepeso"
+            imc in 18.5..24.9 -> "peso saludable"
+            imc in 25.0..29.9 -> "sobrepeso"
             else-> "obesidad"
         }
     }
