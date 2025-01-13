@@ -3,7 +3,7 @@ import kotlin.math.round
 
 class Persona(val peso: Double, val altura: Double){
     var nombre: String = "Desconocido"
-    val imc: Double = calcularImc()
+    private val imc: Double = calcularImc()
 
     constructor(nombre: String, peso: Double, altura: Double) : this(peso, altura) {
         this.nombre = nombre
